@@ -5,3 +5,8 @@ node_modules/
 .sites-runtime/
 *.tar.gz
 *.log
+
+# Local hosting state and OS metadata
+.vercel/
+.DS_Store
+Thumbs.db
