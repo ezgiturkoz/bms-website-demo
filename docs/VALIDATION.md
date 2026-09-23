@@ -12,3 +12,12 @@
 - No phone/email, unsupported certifications, customers, statistics, reference-company branding or source document is included in public output.
 
 The image is original representative imagery; the wordmark is provisional. A formal accessibility certification, independent security audit and actual custom-domain/DNS setup are not claimed. Final contact details and public launch remain pending approval.
+
+## Version 2 redesign checks
+
+- All six routes checked in browser at 320, 390, 768, 1024 and 1440px: no horizontal overflow, no broken loaded images, one H1 per page.
+- Desktop hero, distinct service photography, education/process layouts and mobile hero visually inspected.
+- Static route/fragment/asset validation passed after the redesign.
+- Added a regression check confirming five homepage image placements, five unique asset URLs and five unique image hashes.
+- Shared navigation, FAQ and address-copy JavaScript is unchanged from the previously tested version.
+- The source remains a private, noindex review build. No public deployment or domain changes.

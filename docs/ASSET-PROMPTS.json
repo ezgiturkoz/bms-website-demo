@@ -1,0 +1,21 @@
+{
+  "method": "Built-in image generation",
+  "assets": [
+    {
+      "file": "public/assets/workspace.png",
+      "prompt": "Wide 3:2 premium editorial corporate photograph: modern glass-walled scientific workspace with two generic professionals seen from behind discussing work at a table, refined architecture, cool navy and teal tones with natural daylight. No microscope. Not actual company premises. No text, brands, logos or watermark."
+    },
+    {
+      "file": "public/assets/documentation.png",
+      "prompt": "Wide 3:2 premium editorial photograph for quality system consulting. Close tabletop composition of hands reviewing carefully organized technical quality documents with a pen, charcoal binder and edge of silver laptop, architectural daylight, neutral white and restrained navy and teal details. Only abstract illegible lines on paperwork. No people faces, microscope, readable text, logos or watermark."
+    },
+    {
+      "file": "public/assets/precision.png",
+      "prompt": "Wide 3:2 premium editorial scientific photograph: macro blue gloved hand operating a precision pipette above a rack of clear laboratory sample tubes, shallow depth of field, elegant cool daylight, navy and teal palette, accurate realistic laboratory equipment. No microscope, text, logo, watermark. Generic representative laboratory, not an actual company's premises."
+    },
+    {
+      "file": "public/assets/preparation.png",
+      "prompt": "Wide 3:2 premium corporate editorial photograph: a professional consultation meeting at a light oak desk reviewing an open ring binder with abstract illegible checklist markings. Two pairs of hands and business attire torsos visible, no faces. Overhead oblique angle, bright window light and subtle navy teal accents. Realistic uncluttered styling. No certificates, seals, official insignia, readable text, logos, microscope or watermark."
+    }
+  ]
+}

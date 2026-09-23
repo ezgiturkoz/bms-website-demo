@@ -27,7 +27,7 @@ Blank commercial offer fields, client details, signatures, tax/bank details, con
 
 ## Image provenance
 
-`public/assets/laboratory.png` is an original generated asset using the built-in image-generation tool, created for this site, not obtained from the reference. It depicts generic equipment and must not be presented as actual BMS facilities. It is reused with different crops to avoid unnecessary asset weight. BMS lettering is an original text treatment, pending any official supplied logo.
+`public/assets/laboratory.png` is an original generated asset using the built-in image-generation tool, created for this site, not obtained from the reference. It depicts generic equipment and must not be presented as actual BMS facilities. It appears only in the homepage hero. The repeated image placements were replaced in Version 2 with distinct original assets. BMS lettering is an original text treatment, pending any official supplied logo.
 
 Generation prompt:
 
@@ -36,3 +36,10 @@ Use case: photorealistic-natural. Asset type: Turkish laboratory quality consult
 ## Review limitations
 
 Phone and email remain intentionally absent per user direction. No company logo was supplied. The documented address is used exactly; its map destination is an address search, not a verified business listing. Public launch and any custom-domain connection remain pending user review and approval.
+
+
+## Version 2 visual revision
+
+At the user’s request, the site moved to a more refined navy/petrol palette with a split photographic hero, restrained typographic hierarchy, integrated service navigation, distinct photographic service cards, an editorial education list and a two-column principles section. Shared styling also updates all inner pages. All business facts, routes and private-review restrictions remain intact.
+
+The homepage has five distinct image files: laboratory.png (hero), workspace.png (about), documentation.png (management systems), precision.png (technical applications), preparation.png (accreditation preparation). All are original representative generated visuals, not photographs of company staff or premises. Four new image prompts are recorded in ASSET-PROMPTS.json.

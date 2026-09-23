@@ -25,7 +25,7 @@ npm run preview
 - `src/pages.mjs`: six page compositions.
 - `public/styles.css`: tokens, responsive styles, print and reduced-motion styles.
 - `public/site.js`: mobile navigation and address-copy interaction.
-- `public/assets/laboratory.png`: original representative laboratory illustration/photo asset.
+- `public/assets/`: five original representative corporate and laboratory image assets; no repeated homepage photograph.
 - `scripts/build.mjs`: generates semantic static pages and metadata.
 - `scripts/server.mjs`: dependency-free local preview server.
 - `scripts/check.mjs`: verifies routes, local links, anchors, assets, basic SEO and excluded content.
