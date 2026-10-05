@@ -18,7 +18,9 @@ console.log(`PASS: ${consulting.length} additional consulting services, ${traini
 
 // Regression guard for the reported repeated-photograph issue.
 const home=await readFile('dist/index.html','utf8');
-const homeImages=[...home.matchAll(/<img[^>]*src="([^"]+)"/g)].map(m=>m[1]);
+const homeImages=[...home.matchAll(/<img\b[^>]*>/g)]
+ .filter(([tag])=>!/\bclass="[^"]*\bbrand-logo\b/.test(tag))
+ .map(([tag])=>tag.match(/\bsrc="([^"]+)"/)[1]);
 assert.equal(homeImages.length,5,'Home should have five image placements');
 assert.equal(new Set(homeImages).size,5,'Each home image must be distinct');
 const hashes=await Promise.all(homeImages.map(async file=>createHash('sha256').update(await readFile('dist'+file)).digest('hex')));

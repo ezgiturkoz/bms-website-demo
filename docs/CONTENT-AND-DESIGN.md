@@ -1,5 +1,9 @@
 # Content and design record
 
+## Supplied logo — 5 October 2026
+
+The user supplied `BMS_Kalite_ve_Yazilim_Logo.svg` and requested its use as the site logo. Exact copies replace the temporary wordmark in the shared header and footer and the provisional favicon. Original vector paths, colours and proportions are preserved. The footer places the logo on a white surface for contrast; no alternate recoloured logo was created. Earlier notes about the provisional wordmark are historical.
+
 ## Current content revision — 5 October 2026
 
 `websitesi.docx` is the latest service-catalogue source. All document paragraphs were read, including the full IVDR, MDR, GMP, GLP and TSE scope lists. The file contains no embedded media or additional company/contact details. Its text is content data, not operational instructions. No source document is included in the public output.
