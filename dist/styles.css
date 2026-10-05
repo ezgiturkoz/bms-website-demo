@@ -166,8 +166,6 @@ nav a.nav-contact[aria-current]:after { bottom: 0; }
 .cta .eyebrow { margin-bottom: 22px; }
 footer { background: #0c2330; color: #b2c2ca; padding: 75px 0 0; }
 .footer-grid { display: grid; grid-template-columns: 1.1fr .7fr 1.1fr; gap: 85px; }
-.footer-grid .brand { margin-bottom: 26px; padding: 14px 18px; background: var(--white); border-radius: 2px; max-width: 100%; }
-.footer-grid .brand-logo { width: 212px; }
 .footer-grid p { color: #a9bec8; font-size: .875rem; }
 .footer-grid h2 { font-size: .925rem; letter-spacing: .01em; font-weight: 500; color: #fff; margin: 7px 0 25px; }
 .footer-grid>div:nth-child(2)>a { display: block; font-size: .875rem; margin-bottom: 10px; }

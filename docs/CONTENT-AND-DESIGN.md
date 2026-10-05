@@ -2,7 +2,7 @@
 
 ## Supplied logo — 5 October 2026
 
-The user supplied `BMS_Kalite_ve_Yazilim_Logo.svg` and requested its use as the site logo. Exact copies replace the temporary wordmark in the shared header and footer and the provisional favicon. Original vector paths, colours and proportions are preserved. The footer places the logo on a white surface for contrast; no alternate recoloured logo was created. Earlier notes about the provisional wordmark are historical.
+The user supplied `BMS_Kalite_ve_Yazilim_Logo.svg` and requested its use as the site logo. Exact copies replace the temporary wordmark in the shared header and the provisional favicon. Original vector paths, colours and proportions are preserved. The footer logo and its white surface were removed at the user's subsequent request. Earlier notes about the provisional wordmark are historical.
 
 ## Current content revision — 5 October 2026
 

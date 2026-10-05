@@ -60,7 +60,7 @@ The static output is compatible with Sites (`dist/index.html` and the manifest) 
 
 The source document has blank phone, email and website fields. At the user's direction, this version shows only the confirmed Ankara address. Populate `company.email` and `company.phone` in `src/content.mjs` when approved, then rebuild. The contact page will show working email/phone links. No fake lead form or unsent submission action is included. The map action searches the exact documented address rather than inventing coordinates.
 
-The header, footer and favicon use the user-supplied `BMS_Kalite_ve_Yazilim_Logo.svg`, preserved in `public/assets/bms-logo.svg` and `public/favicon.svg`. Its original proportions and colours are retained; a white footer surface keeps the supplied artwork readable. The laboratory image is representative, not a photograph of BMS premises. See `docs/CONTENT-AND-DESIGN.md` for source mapping and asset provenance.
+The header and favicon use the user-supplied `BMS_Kalite_ve_Yazilim_Logo.svg`, preserved in `public/assets/bms-logo.svg` and `public/favicon.svg`. Its original proportions and colours are retained. The footer has no logo, at the user's request. The laboratory image is representative, not a photograph of BMS premises. See `docs/CONTENT-AND-DESIGN.md` for source mapping and asset provenance.
 
 ## Git
 
