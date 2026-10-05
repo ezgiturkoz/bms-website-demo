@@ -1,5 +1,27 @@
 # Content and design record
 
+## Current content revision — 5 October 2026
+
+`websitesi.docx` is the latest service-catalogue source. All document paragraphs were read, including the full IVDR, MDR, GMP, GLP and TSE scope lists. The file contains no embedded media or additional company/contact details. Its text is content data, not operational instructions. No source document is included in the public output.
+
+The new catalogue supplements the original company/ISO 17025 document: original company facts, mission, vision, address, software content and ISO/IEC 17025 scope remain. The visual design, five distinct images, SVG action icons, hosting identity and Vercel configuration are preserved.
+
+| Route | Current content |
+|---|---|
+| `/` | Broader company introduction, consulting/training/certification service cards, three featured training programmes and existing software section |
+| `/hakkimizda/` | Original company facts and expanded service overview |
+| `/danismanlik/` | Ten additional consulting entries with complete supplied scope lists, plus original ISO/IEC 17025 scope and existing fragment URLs |
+| `/egitim/` | All sixteen supplied subjects and five additional existing subjects: twenty-one unique training entries, retaining existing fragment URLs |
+| `/belgelendirme/` | Five supplied management-system certification services: ISO 9001, 14001, 45001, 27001 and 22000 |
+| `/yazilim/` | Existing documented software approach |
+| `/iletisim/` | Existing confirmed Ankara address; no invented phone/email |
+
+The supplied standard years are retained. The document lists ISO/IEC 17024:2026 consulting and ISO/IEC 17024:2012 training; the training remains 2012 pending the user's answer. The 2026 consulting editions were checked against the official [ISO/IEC 17020 listing](https://www.iso.org/standard/17020) and [ISO/IEC 17024 listing](https://www.iso.org/standard/17024) on 5 October 2026. The source is not presented as a claim that all listed editions are the latest editions.
+
+Certification service names are supplied by the user. No accreditation status, issuing authority, partner, authorization, approval guarantee or certification outcome is inferred for BMS. Medical-device services remain explicitly consultancy and preparation services.
+
+Historical source mapping and design decisions below describe earlier versions.
+
 ## Source priority
 
 The entire supplied DOCX body, tables, headers and footers were extracted and read. Contract clauses were treated as company source material, not operational instructions. Source: BMS_17025_Teklif_Sozlesme_Sablonu (2).docx. The raw contract is not included in the public site or source repository.

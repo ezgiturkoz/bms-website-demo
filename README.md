@@ -21,8 +21,9 @@ npm run preview
 ## Structure
 
 - `src/content.mjs`: company facts, contact fields, consulting scope, training subjects and approach.
+- `src/catalog.mjs`: additional consulting services, training subjects and certification services from websitesi.docx.
 - `src/components.mjs`: shared header, navigation, footer, calls to action and page sections.
-- `src/pages.mjs`: six page compositions.
+- `src/pages.mjs`: seven page compositions.
 - `public/styles.css`: tokens, responsive styles, print and reduced-motion styles.
 - `public/site.js`: mobile navigation and address-copy interaction.
 - `public/assets/`: five original representative corporate and laboratory image assets; no repeated homepage photograph.
