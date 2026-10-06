@@ -14,7 +14,7 @@ const educationHtml=await readFile('dist/egitim/index.html','utf8');
 for(const [title] of trainings)assert(educationHtml.includes(title),`Missing training: ${title}`);
 const certificationHtml=await readFile('dist/belgelendirme/index.html','utf8');
 for(const {code,title} of certifications){assert(certificationHtml.includes(code));assert(certificationHtml.includes(title));}
-console.log(`PASS: ${consulting.length} additional consulting services, ${trainings.length} training programmes and ${certifications.length} certification services rendered in full.`);
+console.log(`PASS: ${consulting.length} consulting services, ${trainings.length} training programmes and ${certifications.length} certification services rendered in full.`);
 
 // Regression guard for the reported repeated-photograph issue.
 const home=await readFile('dist/index.html','utf8');

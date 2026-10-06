@@ -1,5 +1,24 @@
 # Content and design record
 
+## Certification image replacement — 6 October 2026
+
+The user rejected the precision-instrument photograph for certification. It has been replaced in both the homepage service card and certification page introduction by certification-review.webp, an original representative document-review scene. No company claims, service copy, logo, layout or hosting configuration changed. Its exact built-in generation prompt is recorded in ASSET-PROMPTS.json.
+
+
+## Full visual refresh and consulting consistency — 6 October 2026
+
+At the user's request, all five previous photographs were replaced and a sixth original photograph was added for the software page. The shared design now uses navy, white and restrained red details aligned with the supplied logo. The homepage uses a full-width photographic hero; consulting, education, certification and software have subject-specific introductory photographs. Company and contact text is preserved. The supplied logo remains unchanged, and no footer logo is added.
+
+ISO/IEC 17025 is now one of sixteen consistently presented consulting disclosures. Its previous separate treatment came from the detailed initial ISO 17025 proposal document, not a documented business priority. All three detailed scope groups, four project stages, three questions and the accreditation qualification are retained inside its expandable content. Existing fragment URLs reveal their enclosing disclosures.
+
+Six representative photographic assets were generated with the built-in image tool and encoded as WebP at their original 1536×1024 dimensions. They do not depict actual BMS staff, premises or software. Exact prompts and asset mappings are in `ASSET-PROMPTS.json`; originals remain in the workspace outside the website repository. No reference-site photography was copied. The six served image files total 814,928 bytes. UI action arrows were removed; the original logo geometry is unchanged.
+
+This remains a local private-review version. No public deployment, push, hosting identity or domain configuration change was made.
+
+## Catalogue expansion — 6 October 2026
+
+At the user's explicit request, the reference site's three service lists were compared with the existing BMS catalogue. Five consulting headings and thirteen training programmes were added; the five certification entries already cover the reference's three certification categories and remain unchanged. The catalogue now has sixteen consulting entries including ISO/IEC 17025, and thirty-four training programmes. See [SERVICE-COMPARISON.md](SERVICE-COMPARISON.md) for the category mapping, sources and standard-edition decisions. This request expands the content-source scope for service names only; company facts and authority claims remain governed by the supplied company documents.
+
 ## Supplied logo — 5 October 2026
 
 The user supplied `BMS_Kalite_ve_Yazilim_Logo.svg` and requested its use as the site logo. Exact copies replace the temporary wordmark in the shared header and the provisional favicon. Original vector paths, colours and proportions are preserved. The footer logo and its white surface were removed at the user's subsequent request. Earlier notes about the provisional wordmark are historical.

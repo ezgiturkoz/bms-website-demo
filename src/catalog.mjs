@@ -1,5 +1,11 @@
-// Service catalogue supplied in websitesi.docx. Years reflect the supplied editions.
+// Supplied service catalogue, extended at the user's request on 6 October 2026.
+// Source mapping and edition decisions are recorded in docs/SERVICE-COMPARISON.md.
 export const consulting = [
+  {
+    id: 'iso-17025', code: 'ISO/IEC 17025',
+    title: 'Deney ve Kalibrasyon Laboratuvarları Danışmanlığı',
+    description: 'Yönetim sistemi ve teknik yeterlilik altyapısının kurulması, geliştirilmesi ve TÜRKAK akreditasyonuna hazırlık.'
+  },
   {
     id: 'iso-17020', code: 'ISO/IEC 17020:2026',
     title: 'Muayene Kuruluşları Yönetim Sistemi Danışmanlığı',
@@ -51,6 +57,26 @@ export const consulting = [
     id: 'tse', code: 'TSE / TSEK / HYB', title: 'TSE Belgelendirme ve Hizmet Yeterlilik Danışmanlığı',
     description: 'TSE, TSEK ve Hizmet Yeterlilik Belgesi süreçlerine yönelik danışmanlık.',
     items: ['TSE Uygunluk Belgesi süreçlerine hazırlık', 'TSEK Belgesi süreçlerine hazırlık', 'TSE Hizmet Yeterlilik Belgesi (HYB) süreçlerine hazırlık', 'Başvuru dokümantasyonunun hazırlanması', 'Belgelendirme denetimine hazırlık', 'Denetim sonrası uygunsuzlukların giderilmesine destek']
+  },
+  {
+    id: 'iso-13485', code: 'ISO 13485:2016', title: 'Tıbbi Cihazlar Kalite Yönetim Sistemi Danışmanlığı',
+    description: 'Tıbbi cihaz alanında faaliyet gösteren kuruluşlar için kalite yönetim sistemi kurulumu ve geliştirilmesine yönelik danışmanlık.'
+  },
+  {
+    id: 'iso-20387', code: 'ISO 20387:2018', title: 'Biyobankacılık ve Akreditasyona Hazırlık Danışmanlığı',
+    description: 'Biyobankaların kalite, yeterlilik ve tutarlı işleyişine yönelik sistem çalışmaları ile akreditasyon hazırlığına destek.'
+  },
+  {
+    id: 'iso-27001', code: 'ISO/IEC 27001:2022', title: 'Bilgi Güvenliği Yönetim Sistemi Danışmanlığı',
+    description: 'Kuruluşun bilgi güvenliği ihtiyaçlarına uygun yönetim sisteminin kurulması ve geliştirilmesine yönelik danışmanlık.'
+  },
+  {
+    id: 'iso-22000', code: 'ISO 22000:2018', title: 'Gıda Güvenliği Yönetim Sistemi Danışmanlığı',
+    description: 'Gıda zincirinde faaliyet gösteren kuruluşlar için gıda güvenliği yönetim sistemi çalışmalarına destek.'
+  },
+  {
+    id: 'iso-50001', code: 'ISO 50001:2018', title: 'Enerji Yönetim Sistemi Danışmanlığı',
+    description: 'Enerji kullanımını ve enerji performansını ele alan yönetim sisteminin kurulması ve geliştirilmesine yönelik danışmanlık.'
   }
 ];
 
@@ -68,7 +94,20 @@ export const additionalTrainings = [
   ['PPAP – Üretim Parçası Onay Prosesi (Production Part Approval Process) Eğitimi', 'Üretim parçası onay prosesi eğitimi.'],
   ['Kök Neden Analizi ve Düzeltici Faaliyet Yönetimi Eğitimi', 'Kök neden analizi ve düzeltici faaliyetlerin yönetimi.'],
   ['ISO 10002 – Müşteri Memnuniyeti ve Şikâyetlerin Ele Alınması Eğitimi', 'Müşteri memnuniyeti ve şikâyetlerin ele alınması.'],
-  ['KVKK – 6698 Sayılı Kişisel Verilerin Korunması Kanunu Uygulamaları Eğitimi', 'Kişisel verilerin korunmasına ilişkin uygulamalar.']
+  ['KVKK – 6698 Sayılı Kişisel Verilerin Korunması Kanunu Uygulamaları Eğitimi', 'Kişisel verilerin korunmasına ilişkin uygulamalar.'],
+  ['ISO/IEC 17025:2017 – Kuruma Özel Uyum ve Geçiş Programı', '2017 sürümünün gereklilikleri, dokümantasyon ve laboratuvar uygulamalarının birlikte ele alındığı eğitim programı.'],
+  ['ISO 15189:2022 – Revizyon ve Geçiş Eğitimi', 'Tıbbi laboratuvarlarda 2022 sürümünün gereklilikleri ve sistemin bu sürüme uyarlanması.'],
+  ['ISO 31000:2018 – Risk Yönetimi Eğitimi', 'Kuruluş genelinde risklerin tanımlanması, değerlendirilmesi, ele alınması ve izlenmesine yönelik ilkeler.'],
+  ['Temizlik Validasyonu Eğitimi', 'Temizlik süreçlerinin geçerli kılınmasına ilişkin yaklaşım, planlama ve kayıtların ele alınması.'],
+  ['AS 9100 Rev D – Havacılık, Uzay ve Savunma Kalite Yönetim Sistemi Eğitimi', 'Havacılık, uzay ve savunma kuruluşları için kalite yönetim sistemi gereklilikleri.'],
+  ['ISO 14971:2019 – Tıbbi Cihazlarda Risk Yönetimi Eğitimi', 'Tıbbi cihazların yaşam döngüsü boyunca risklerin değerlendirilmesi ve kontrolüne yönelik yaklaşım.'],
+  ['ISO/IEC 27001:2022 – Bilgi Güvenliği Yönetim Sistemi Eğitimi', 'Bilgi güvenliği yönetim sistemi gereklilikleri ve kuruluş içindeki uygulamaları.'],
+  ['ISO 45001:2018 – İş Sağlığı ve Güvenliği Yönetim Sistemi Eğitimi', 'İş sağlığı ve güvenliği yönetim sisteminin temel gereklilikleri.'],
+  ['ISO 28000:2022 – Güvenlik ve Tedarik Zinciri Güvenliği Yönetimi Eğitimi', 'Tedarik zinciri dahil kuruluşun faaliyetlerinde güvenlik yönetimi gereklilikleri.'],
+  ['ISO 50001:2018 – Enerji Yönetim Sistemi Eğitimi', 'Enerji yönetim sistemi gereklilikleri, enerji kullanımı ve performansının değerlendirilmesi.'],
+  ['8D Problem Çözme Teknikleri Eğitimi', 'Problemlerin tanımlanması, kök nedenlerin incelenmesi ve kalıcı düzeltici faaliyetlerin planlanması.'],
+  ['MDR (AB 2017/745) – Tıbbi Cihaz Tüzüğü Eğitimi', 'Tıbbi cihazlar için MDR kapsamında uygunluk değerlendirmesi ve teknik dokümantasyonun ele alınması.'],
+  ['ISO/IEC 27701:2025 – Kişisel Veri ve Gizlilik Yönetim Sistemi Eğitimi', 'Kişisel verilerin işlenmesine ilişkin gizlilik yönetim sistemi gereklilikleri ve uygulama yaklaşımı.']
 ];
 
 export const certifications = [

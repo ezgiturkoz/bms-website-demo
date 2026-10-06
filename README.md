@@ -1,6 +1,6 @@
 # BMS Kalite Yazılım corporate website
 
-Portable six-page Turkish corporate website. Standard HTML, CSS and JavaScript, generated with Node.js built-ins. No package dependencies, tracking, cookies, external fonts, form processor, credentials or platform runtime SDK.
+Portable seven-page Turkish corporate website. Standard HTML, CSS and JavaScript, generated with Node.js built-ins. No package dependencies, tracking, cookies, external fonts, form processor, credentials or platform runtime SDK.
 
 ## Local development
 
@@ -21,12 +21,12 @@ npm run preview
 ## Structure
 
 - `src/content.mjs`: company facts, contact fields, consulting scope, training subjects and approach.
-- `src/catalog.mjs`: additional consulting services, training subjects and certification services from websitesi.docx.
+- `src/catalog.mjs`: consulting services, training subjects and certification services; source mapping is documented in `docs/`.
 - `src/components.mjs`: shared header, navigation, footer, calls to action and page sections.
 - `src/pages.mjs`: seven page compositions.
 - `public/styles.css`: tokens, responsive styles, print and reduced-motion styles.
-- `public/site.js`: mobile navigation and address-copy interaction.
-- `public/assets/`: five original representative corporate and laboratory image assets; no repeated homepage photograph.
+- `public/site.js`: mobile navigation, address-copy interaction and disclosure-aware fragment navigation.
+- `public/assets/`: supplied SVG logo and six optimized original representative WebP photographs; the homepage uses five distinct photographs.
 - `scripts/build.mjs`: generates semantic static pages and metadata.
 - `scripts/server.mjs`: dependency-free local preview server.
 - `scripts/check.mjs`: verifies routes, local links, anchors, assets, basic SEO and excluded content.
@@ -60,7 +60,7 @@ The static output is compatible with Sites (`dist/index.html` and the manifest) 
 
 The source document has blank phone, email and website fields. At the user's direction, this version shows only the confirmed Ankara address. Populate `company.email` and `company.phone` in `src/content.mjs` when approved, then rebuild. The contact page will show working email/phone links. No fake lead form or unsent submission action is included. The map action searches the exact documented address rather than inventing coordinates.
 
-The header and favicon use the user-supplied `BMS_Kalite_ve_Yazilim_Logo.svg`, preserved in `public/assets/bms-logo.svg` and `public/favicon.svg`. Its original proportions and colours are retained. The footer has no logo, at the user's request. The laboratory image is representative, not a photograph of BMS premises. See `docs/CONTENT-AND-DESIGN.md` for source mapping and asset provenance.
+The header and favicon use the user-supplied `BMS_Kalite_ve_Yazilim_Logo.svg`, preserved in `public/assets/bms-logo.svg` and `public/favicon.svg`. Its original proportions and colours are retained. The footer has no logo, at the user's request. Photographs are representative scenes, not actual BMS staff, premises or software. See `docs/CONTENT-AND-DESIGN.md` and `docs/ASSET-PROMPTS.json` for source mapping and asset provenance. WebP files are ready to serve; image tooling is not required to build or run the project.
 
 ## Git
 
