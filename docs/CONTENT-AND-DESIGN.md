@@ -1,5 +1,28 @@
 # Content and design record
 
+## Approved search indexing — 9 October 2026
+
+The owner requested enabling Google indexing and selected `https://www.bmskalite.com` as the primary website address. Default builds now generate indexable page metadata, crawlable robots.txt, canonical/OG URLs and the seven-page sitemap for that origin. Explicit review builds and recognized Vercel non-production builds remain noindex. This changes publication preparation only, not visible content or design, DNS or live hosting. Earlier private-review defaults below are historical.
+
+## Training and certification cards — 9 October 2026
+
+At the owner's request, the training and certification consultancy catalogues return to two bordered cards per desktop row, with navy top borders and the earlier numbering/standard-label treatment. Existing descriptions are always visible inside each card; clicking or keyboard-activating the native disclosure reveals only a compact contact action. The shared dialog still prefills the selected service title. Mobile uses one column. Content, edition labels, the ISO/IEC 17020 priority, stable fragment IDs and consulting catalogue remain unchanged.
+
+## Approved company contact and replacement logo — 8 October 2026
+
+The owner supplied `info@bmskalite.com` and `05053710281`. The contact page now displays the email and phone (formatted internationally as `+90 505 371 02 81`) with mailto/tel links. Both inline and modal forms route to the company mailbox. Recipient activation and actual delivery must be confirmed independently of the earlier Gmail test.
+
+The supplied `BMS_Kalite_ve_Yazilim_beyaz.svg` replaces the header logo and favicon byte-for-byte. Its white background, vector paths and colours are preserved, and the header dimensions match its 1060 × 366 aspect ratio. The footer remains without a logo. Earlier notes below describe historical versions.
+
+## Contact workflow and requested content revision — 7 October 2026
+
+The owner requested one reusable email contact form on the contact page and in all service disclosures. FormSubmit provides static-host-compatible delivery to the temporary mailbox in `src/contact-config.mjs`; setup and recipient replacement are documented in `CONTACT-FORM.md`. No company public email was invented. Training and certification entries now use the same disclosure interaction as consulting.
+
+ISO/IEC 17020 and its 2026 transition are prioritized in consulting and training order and the home hero, while all ISO/IEC 17025 details and existing fragment links remain. The top location strip and shortcut numbers were removed. Category naming is now Belgelendirme Danışmanlığı, without changing technical uses of personel belgelendirme. The owner’s process and software wording is reproduced, and ISO 9001 training/certification consultancy labels now use 2026. The edition was verified using the official [ISO 9001 listing](https://www.iso.org/standard/9001) and [ISO publication announcement](https://committee.iso.org/news/2026/09/ISO9001-2026).
+
+The reference homepage was revisited for its wide photographic slider and layered transition treatment. The BMS hero uses three existing original photographs with slow dissolves/zoom, manual slide selection, pause, background/viewport/focus pauses and reduced-motion support. Main heading text remains stable and has no periods; the approach caption is larger. A light reveal effect enhances selected sections without hiding content when JavaScript or motion is unavailable. Carousel photographs intentionally recur in their related service cards; at least five distinct photo assets remain across the homepage. No reference assets, scripts or business copy were imported.
+
+
 ## Certification image replacement — 6 October 2026
 
 The user rejected the precision-instrument photograph for certification. It has been replaced in both the homepage service card and certification page introduction by certification-review.webp, an original representative document-review scene. No company claims, service copy, logo, layout or hosting configuration changed. Its exact built-in generation prompt is recorded in ASSET-PROMPTS.json.

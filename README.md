@@ -1,6 +1,6 @@
 # BMS Kalite Yazılım corporate website
 
-Portable seven-page Turkish corporate website. Standard HTML, CSS and JavaScript, generated with Node.js built-ins. No package dependencies, tracking, cookies, external fonts, form processor, credentials or platform runtime SDK.
+Portable seven-page Turkish corporate website. Standard HTML, CSS and JavaScript, generated with Node.js built-ins. No package dependencies, tracking, external fonts, credentials or platform runtime SDK. The contact form uses FormSubmit for email delivery.
 
 ## Local development
 
@@ -15,6 +15,7 @@ Visit http://127.0.0.1:4173. Edit source, run `npm run build`, then refresh the 
 ```sh
 npm run build
 npm run check
+npm test
 npm run preview
 ```
 
@@ -25,7 +26,10 @@ npm run preview
 - `src/components.mjs`: shared header, navigation, footer, calls to action and page sections.
 - `src/pages.mjs`: seven page compositions.
 - `public/styles.css`: tokens, responsive styles, print and reduced-motion styles.
-- `public/site.js`: mobile navigation, address-copy interaction and disclosure-aware fragment navigation.
+- `public/site.js`: mobile navigation, address-copy, fragment navigation and progressive reveal transitions.
+- `src/contact-config.mjs`: temporary form recipient, changed in one place.
+- `public/contact.js` and `public/contact-delivery.js`: reusable form/dialog behavior and isolated email transport.
+- `src/hero.mjs` and `public/hero.js`: three original photo slides with continuous automatic rotation, previous/next SVG arrows and reduced-motion styling.
 - `public/assets/`: supplied SVG logo and six optimized original representative WebP photographs; the homepage uses five distinct photographs.
 - `scripts/build.mjs`: generates semantic static pages and metadata.
 - `scripts/server.mjs`: dependency-free local preview server.
@@ -35,7 +39,9 @@ npm run preview
 
 ## Private review and domain transition
 
-Current source defaults to private review: noindex/nofollow, robots disallow and optional host-level noindex header. These directives are not access control. Review locally or use owner-private Sites access. No public deployment is authorized yet.
+The owner approved search indexing and `https://www.bmskalite.com` as the primary website address on 9 October 2026. Defaults live in `src/publication.mjs`: a normal build is production/indexable and generates the sitemap and canonical/OG URLs for that address. This prepares output only; it does not connect DNS or deploy the site.
+
+Vercel preview/development/custom environments, when identified by `VERCEL_ENV`, remain non-indexable. Set `SITE_STAGE=review` explicitly for any other demo host. These directives are not access control.
 
 1. Development: run locally.
 2. Private Review: save the matching pushed source and static archive as a Sites version. Keep audience private. Do not publish without the requested review.
@@ -43,24 +49,22 @@ Current source defaults to private review: noindex/nofollow, robots disallow and
 4. Client approval: confirm company contact details, identity and factual content.
 5. Final domain: connect the official domain, set `SITE_ORIGIN` to its HTTPS origin (no trailing slash), and set `SITE_STAGE=production`. Run build/check and deploy the reviewed version. This enables indexing and emits the final sitemap/canonical URLs. Redirect the old host at the hosting layer when supported.
 
-PowerShell example for an approved final domain:
+Normal build for the approved final domain:
 
 ```powershell
-$env:SITE_ORIGIN = 'https://www.your-approved-domain.com'
-$env:SITE_STAGE = 'production'
 npm run build
 npm run check
 ```
 
-For private review, leave both variables unset. Every public-facing output is company-branded. Hosting config and this private developer documentation describe technical integration only.
+For private review, set `SITE_STAGE=review` before building. For Vercel Production, remove any old review-stage override or set `SITE_STAGE=production`; remove any old `SITE_ORIGIN` override or set it to `https://www.bmskalite.com`. Existing environment values take precedence over the source defaults. Rebuild/redeploy after changing these settings. Do not change `vercel.json` for indexing. After deployment, confirm the live site's robots.txt, page robots meta, canonical URLs, sitemap and response headers. Submit `https://www.bmskalite.com/sitemap.xml` in Google Search Console. Indexability does not guarantee search inclusion or timing.
 
 The static output is compatible with Sites (`dist/index.html` and the manifest) and other static hosts. No Worker, database, account integration or API secret is required. `_headers` provides baseline headers on hosts supporting that convention; configure equivalent headers on other hosts. A host must serve directory index pages and `404.html` appropriately.
 
 ## Contact and brand approval
 
-The source document has blank phone, email and website fields. At the user's direction, this version shows only the confirmed Ankara address. Populate `company.email` and `company.phone` in `src/content.mjs` when approved, then rebuild. The contact page will show working email/phone links. No fake lead form or unsent submission action is included. The map action searches the exact documented address rather than inventing coordinates.
+The confirmed Ankara address is retained. The contact form routes to the approved company mailbox `info@bmskalite.com`, configured in `src/contact-config.mjs`. The contact page displays that address and `+90 505 371 02 81` from `src/content.mjs`, with email and telephone links. The owner completed activation and confirmed inbox receipt of the local review test on 9 October 2026. Repeat the delivery check on the final hosting origin. See `docs/CONTACT-FORM.md` for setup and testing. The map action searches the exact documented address.
 
-The header and favicon use the user-supplied `BMS_Kalite_ve_Yazilim_Logo.svg`, preserved in `public/assets/bms-logo.svg` and `public/favicon.svg`. Its original proportions and colours are retained. The footer has no logo, at the user's request. Photographs are representative scenes, not actual BMS staff, premises or software. See `docs/CONTENT-AND-DESIGN.md` and `docs/ASSET-PROMPTS.json` for source mapping and asset provenance. WebP files are ready to serve; image tooling is not required to build or run the project.
+The header and favicon use the latest user-supplied `BMS_Kalite_ve_Yazilim_beyaz.svg`, preserved in `public/assets/bms-logo.svg` and `public/favicon.svg`. Its original proportions and colours are retained. The footer has no logo, at the user's request. Photographs are representative scenes, not actual BMS staff, premises or software. See `docs/CONTENT-AND-DESIGN.md` and `docs/ASSET-PROMPTS.json` for source mapping and asset provenance. WebP files are ready to serve; image tooling is not required to build or run the project.
 
 ## Git
 

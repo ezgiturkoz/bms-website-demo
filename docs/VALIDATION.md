@@ -1,4 +1,63 @@
+## Search indexing preparation — 9 October 2026
+
+- Owner authorized removing the review indexing restriction and confirmed `https://www.bmskalite.com` as the primary origin. Source defaults in `src/publication.mjs` now select production; existing environment overrides still take precedence, with recognized Vercel non-production environments always non-indexable.
+- Built and checked both a Vercel preview and an explicit review configuration: all seven routes retain noindex, robots disallow and the generated noindex header. Rebuilt the final saved output with production defaults afterward.
+- Verified all seven production pages contain `index,follow`, have canonical and Open Graph URLs on the approved origin, and contain no noindex directive. robots.txt allows crawling and links the approved sitemap. The sitemap contains exactly the seven valid page URLs. The generated production headers no longer contain X-Robots-Tag.
+- Existing seven-route/catalogue/link checks passed. `vercel.json` remains unchanged (SHA-256 `1315E68D24CDC390B8B91B2BA238131B6EEDC76AE27D70941357F7C5EF8A02D0`).
+- No GitHub push, hosting settings change, DNS change or deployment occurred. Live HTTP headers, domain routing and Google indexing must be checked after the owner publishes this version. Local indexability is not proof of live publication or Google inclusion.
+
+## Company mailbox delivery test — 9 October 2026
+
+Confirmed: the owner activated the company recipient and confirmed that the subsequent test arrived in the inbox (not spam). The submission through the inline form used subject `BMS iletişim formu testi` and code `BMS-20261009-02`; it returned the accepted/success state and cleared the message field. Real delivery to `info@bmskalite.com` from the local review form is verified. Repeat the delivery check on the final hosting origin after deployment; future inbox placement is not guaranteed by one successful test. Screenshot: `outputs/review/company-mail-test-accepted.png` outside the repository.
+
+Initial attempt: the owner explicitly authorized a real delivery test to `info@bmskalite.com`. The first submission used that company address as the reply email, subject `BMS iletişim formu testi`, and code `BMS-20261009-01`. It returned the activation-required state and retained the draft. The owner then completed activation before the successful test above. No automatic retries were sent. Screenshot: `outputs/review/company-mail-activation-required.png` outside the repository.
+
+## Training and certification card layout — 9 October 2026
+
+- Build and existing static checks passed: all 7 routes, 34 trainings, 5 certification consultancy entries and 55 service contact links remain available.
+- Browser checks confirmed two columns at 1366px and 768px, one column at 390px and 320px, and no horizontal overflow on either changed catalogue.
+- Closed cards show their description. Clicking a card reveals its compact contact action. Keyboard Enter closes an expanded training card while retaining its description.
+- Both a training and certification action opened the existing dialog with the correct service subject. Escape dismisses the dialog. A direct `#egitim-11` link still expands its card.
+- Screenshots saved outside the repository in `outputs/review/`: `training-cards-desktop.png`, `training-cards-mobile.png`, `certification-cards-desktop.png`, `certification-cards-mobile.png`.
+- No email submissions, service-content changes or deployment were performed.
+
+## Company contact and logo replacement — 8 October 2026
+
+- Production compilation (`npm run build`), the seven-route static checks (`npm run check`) and all four contact transport tests (`npm test`) passed. The saved output remains private/noindex.
+- Both contact-page forms and all shared dialogs target `info@bmskalite.com`. The former Gmail recipient is absent from `src`, `public` and `dist`.
+- The supplied SVG, served header logo and favicon all match SHA-256 `EDDC0ABA171AC5B5736045F6B26C7FCBD203E671C2F00F0B0622BDCB162D4476`; natural dimensions are 1060 × 366.
+- Browser checks at 1366 × 1000 and 390 × 844 confirmed the logo loads at its correct aspect ratio, contact links use `mailto:info@bmskalite.com` and `tel:+905053710281`, and there is no horizontal overflow. Mobile navigation and the logo return-home link work.
+- New-recipient activation and actual email delivery are pending owner authorization for a test. No message has been sent to the new recipient during this change. The previous Gmail delivery test does not verify the company mailbox.
+- No deployment or GitHub push. `vercel.json` remains SHA-256 `1315E68D24CDC390B8B91B2BA238131B6EEDC76AE27D70941357F7C5EF8A02D0`.
+
+## Hero previous/next arrows — 8 October 2026
+
+Added SVG previous/next buttons at opposite hero edges. On compact layouts the buttons sit below the copy to avoid overlapping the text, with 44px touch targets. Controls are hidden until JavaScript is ready, have accessible names and announce manual slide changes. Automatic rotation continues after clicks; each selected slide receives a fresh 6.5-second interval. Number selectors and the pause button remain absent.
+
+Build and static checks passed. An isolated execution of the actual hero script verified previous/next navigation, first/last wrapping, automatic advancement after manual selection, and exactly one active slide. Browser verification could not be completed in this session: the local preview connection remained inaccessible after network permission was granted. No deployment or remote push occurred.
+
+## Continuous hero rotation — 7 October 2026
+
+At the owner's request, the hero's numbered selectors and pause/resume button were removed. Slides now advance every 6.5 seconds independently of hover, focus and scroll position. Reduced-motion CSS still removes zoom and fade effects. The space reserved for the controls was removed. The static build and existing project checks passed; browser verification confirmed no controls, automatic advancement and no horizontal overflow. This supersedes the earlier manual-control behavior below. No deployment or remote push.
+
+## Contact workflow and hero revision — 7 October 2026
+
+- Build, seven-route static checks and four delivery-contract tests pass. All 55 service links open the shared contact flow with an editable subject; old service and training IDs remain valid.
+- Seven pages checked at 320, 768, 1201 and 1440px: no horizontal overflow, broken loaded images or duplicate H1. Desktop and 390px hero/form screenshots were visually inspected.
+- Consulting ISO/IEC 17020, its training and ISO 9001 certification consultancy each prefill the correct subject. Native dialog close and Escape return focus to the opening link and release scroll lock. Mobile navigation opens, routes correctly and closes. The logo returns home.
+- Empty/invalid email fields prevent submission. The live form shows pending, activation-required and successful states; drafts survived the activation failure. The automated transport tests separately cover provider rejection, HTTP/network errors, invalid JSON and timeouts without sending mail.
+- Owner approved a test email to the temporary recipient. First request reached FormSubmit and required activation. Owner confirmed activation; the subsequent test returned success and the owner confirmed receipt in Gmail spam. Actual email delivery is therefore verified; primary-inbox placement is not claimed. No further test submissions were sent.
+- Hero automatic advancement and manual switching were observed. Manual selection pauses autoplay and controls expose the selected state. Reduced-motion, document-hidden, hover, focus and offscreen pause paths were implemented and reviewed; no OS reduced-motion preference was changed.
+- Private/noindex review remains in place. No public deployment, GitHub push, new site or domain changes. The supplied logo and updated certification image are unchanged. `vercel.json` remains SHA-256 1315E68D24CDC390B8B91B2BA238131B6EEDC76AE27D70941357F7C5EF8A02D0.
+
 # Validation record — 23 September 2026
+
+## Certification image follow-up — 6 October 2026
+
+- Replaced the certification image on the homepage service card and certification introduction with the same new document-review photograph.
+- Build and existing checks passed. Five distinct homepage photograph hashes remain valid.
+- Browser confirmed the new source in both locations; certification introduction visually inspected at 1440px and 390px with no overflow or broken image.
+- The new WebP is 107,236 bytes. No service text, layout, logo, hosting configuration or publication state changed.
 
 ## Visual refresh and ISO 17025 disclosure — 6 October 2026
 

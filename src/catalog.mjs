@@ -2,11 +2,6 @@
 // Source mapping and edition decisions are recorded in docs/SERVICE-COMPARISON.md.
 export const consulting = [
   {
-    id: 'iso-17025', code: 'ISO/IEC 17025',
-    title: 'Deney ve Kalibrasyon Laboratuvarları Danışmanlığı',
-    description: 'Yönetim sistemi ve teknik yeterlilik altyapısının kurulması, geliştirilmesi ve TÜRKAK akreditasyonuna hazırlık.'
-  },
-  {
     id: 'iso-17020', code: 'ISO/IEC 17020:2026',
     title: 'Muayene Kuruluşları Yönetim Sistemi Danışmanlığı',
     description: 'Muayene kuruluşları için ISO/IEC 17020:2026 kapsamında yönetim sistemi danışmanlığı.'
@@ -15,6 +10,11 @@ export const consulting = [
     id: 'iso-17020-gecis', code: 'ISO/IEC 17020',
     title: 'ISO/IEC 17020:2012’den ISO/IEC 17020:2026’ya Geçiş Danışmanlığı',
     description: 'Muayene kuruluşlarının 2012 sürümünden 2026 sürümüne geçişine yönelik danışmanlık.'
+  },
+  {
+    id: 'iso-17025', code: 'ISO/IEC 17025',
+    title: 'Deney ve Kalibrasyon Laboratuvarları Danışmanlığı',
+    description: 'Yönetim sistemi ve teknik yeterlilik altyapısının kurulması, geliştirilmesi ve TÜRKAK akreditasyonuna hazırlık.'
   },
   {
     id: 'iso-17024', code: 'ISO/IEC 17024:2026',
@@ -81,7 +81,7 @@ export const consulting = [
 ];
 
 export const additionalTrainings = [
-  ['ISO 9001:2015 – Kalite Yönetim Sistemi Temel Eğitimi', 'Kalite yönetim sisteminin temel gereklilikleri.'],
+  ['ISO 9001:2026 – Kalite Yönetim Sistemi Temel Eğitimi', 'Kalite yönetim sisteminin temel gereklilikleri.'],
   ['ISO 14001:2015 – Çevre Yönetim Sistemi Temel Eğitimi', 'Çevre yönetim sisteminin temel gereklilikleri.'],
   ['ISO 13485:2016 – Tıbbi Cihazlar Kalite Yönetim Sistemi Eğitimi', 'Tıbbi cihazlar alanında kalite yönetim sistemi.'],
   ['ISO/IEC 17020:2026 – Muayene Kuruluşları İçin Gereklilikler Eğitimi', 'Muayene kuruluşları için ISO/IEC 17020:2026 gereklilikleri.'],
@@ -111,9 +111,9 @@ export const additionalTrainings = [
 ];
 
 export const certifications = [
-  {id: 'iso-9001', code: 'ISO 9001:2015', title: 'Kalite Yönetim Sistemi Belgelendirme'},
-  {id: 'iso-14001', code: 'ISO 14001:2015', title: 'Çevre Yönetim Sistemi Belgelendirme'},
-  {id: 'iso-45001', code: 'ISO 45001:2018', title: 'İş Sağlığı ve Güvenliği Yönetim Sistemi Belgelendirme'},
-  {id: 'iso-27001', code: 'ISO 27001:2022', title: 'Bilgi Güvenliği Yönetim Sistemi Belgelendirme'},
-  {id: 'iso-22000', code: 'ISO 22000:2018', title: 'Gıda Güvenliği Yönetim Sistemi Belgelendirme'}
+  {id: 'iso-9001', code: 'ISO 9001:2026', title: 'Kalite Yönetim Sistemi Belgelendirme Danışmanlığı'},
+  {id: 'iso-14001', code: 'ISO 14001:2015', title: 'Çevre Yönetim Sistemi Belgelendirme Danışmanlığı'},
+  {id: 'iso-45001', code: 'ISO 45001:2018', title: 'İş Sağlığı ve Güvenliği Yönetim Sistemi Belgelendirme Danışmanlığı'},
+  {id: 'iso-27001', code: 'ISO 27001:2022', title: 'Bilgi Güvenliği Yönetim Sistemi Belgelendirme Danışmanlığı'},
+  {id: 'iso-22000', code: 'ISO 22000:2018', title: 'Gıda Güvenliği Yönetim Sistemi Belgelendirme Danışmanlığı'}
 ];

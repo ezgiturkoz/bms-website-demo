@@ -3,12 +3,12 @@ export const company = {
  name: 'BMS Kalite Yazılım A.Ş.',
  address: 'Söğütözü Mahallesi, 9 Eylül Cad. No: 4 İç Kapı No: 1, Ankara',
  center: 'Lokman Hekim Üniversitesi Sağlık İlaç Teknoloji Merkezi (LHUSTEK)',
- email: '', phone: '',
+ email: 'info@bmskalite.com', phone: '+90 505 371 02 81',
  intro: 'BMS Kalite Yazılım A.Ş., Eylül 2026 tarihinde Lokman Hekim Üniversitesi Sağlık İlaç Teknoloji Merkezi (LHUSTEK) bünyesinde kurulmuştur. Sağlık, teknoloji ve kalite odaklı hizmetler sunmak üzere faaliyet göstermektedir.',
  mission: 'Kuruluşların kalite, güvenilirlik ve izlenebilirlik hedeflerine ulaşmasını destekleyen; uygulanabilir, sürdürülebilir ve ihtiyaçlara özel çözümler geliştirmek. Danışmanlık, eğitim ve yazılım yetkinliklerini bir arada kullanarak kalite süreçlerinin etkin biçimde yönetilmesine katkı sağlamak.',
  vision: 'Sağlık ve teknoloji alanlarında kalite yönetimi, akreditasyon danışmanlığı ve kalite yazılımları konusunda güvenilir ve yenilikçi çözümler sunan; ulusal ve uluslararası standartlara uyumu destekleyen sürdürülebilir bir marka olmak.'
 };
-export const nav = [['/', 'Ana Sayfa'], ['/hakkimizda/', 'Hakkımızda'], ['/danismanlik/', 'Danışmanlık'], ['/egitim/', 'Eğitim'], ['/belgelendirme/', 'Belgelendirme'], ['/yazilim/', 'Kalite Yazılımları'], ['/iletisim/', 'İletişim']];
+export const nav = [['/', 'Ana Sayfa'], ['/hakkimizda/', 'Hakkımızda'], ['/danismanlik/', 'Danışmanlık'], ['/egitim/', 'Eğitim'], ['/belgelendirme/', 'Belgelendirme Danışmanlığı'], ['/yazilim/', 'Kalite Yazılımları'], ['/iletisim/', 'İletişim']];
 export const services = [
  {id:'yonetim-sistemi',title:'Yönetim sistemi ve dokümantasyon',short:'Laboratuvarın çalışma biçimine uygun bir kalite altyapısı.',items:['Kalite politikaları, hedefler ve görev, yetki ve sorumlulukların oluşturulması','Prosedür, talimat, form, liste ve planların kuruluşa özgü hazırlanması','Doküman ve kayıt kontrol sisteminin kurulması','Tarafsızlık, gizlilik, risk ve fırsatların değerlendirilmesi','Uygun olmayan iş, şikayet, düzeltici faaliyet ve iyileştirme süreçleri','İç tetkik ve Yönetimin Gözden Geçirmesi (YGG) çalışmalarına destek']},
  {id:'teknik-yeterlilik',title:'Teknik laboratuvar uygulamaları',short:'Yetkinlik, ölçüm ve sonuçların izlenebilirliği için uygulama desteği.',items:['Personel yeterlilik kriterleri, eğitim planları ve yetkilendirme kayıtları','Tesis ve çevre koşullarının izlenmesi','Cihaz envanteri, kalibrasyon planı, ara kontrol ve bakım kayıtları','Metrolojik izlenebilirlik ve kalibrasyon sertifikalarının değerlendirilmesi','Metot seçimi, doğrulama / validasyon plan ve kayıtları','Ölçüm belirsizliği yaklaşımı ve kayıt şablonları','Numune alma ve numune yönetimi süreçleri (kapsama göre)','Rapor ve sertifika şablonlarının gözden geçirilmesi','Kalite kontrol, yeterlilik testi ve laboratuvarlar arası karşılaştırma planları','Dış tedarikçi ve hizmet sağlayıcı değerlendirme kayıtları']},
