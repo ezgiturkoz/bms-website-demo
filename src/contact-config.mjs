@@ -1,5 +1,4 @@
-// Approved company mailbox. Rebuild after changing this destination.
-// A new address must be activated through the provider's confirmation email.
-export const contactRecipient = 'info@bmskalite.com';
-export const contactEndpoint = `https://formsubmit.co/${contactRecipient}`;
-export const contactAjaxEndpoint = `https://formsubmit.co/ajax/${contactRecipient}`;
+// Netlify accepts the form on the site's own origin.
+// Configure notifications for info@bmskalite.com in the Netlify project.
+export const contactEndpoint = '/';
+export const contactAjaxEndpoint = '/';

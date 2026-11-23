@@ -1,4 +1,4 @@
-import {deliverContact} from './contact-delivery.js';
+import {deliverContact} from './contact-netlify-delivery-v1.js';
 
 const dialog = document.querySelector('#contact-dialog');
 const dialogForm = dialog?.querySelector('form');
@@ -42,24 +42,19 @@ document.querySelectorAll('.contact-form').forEach(form => {
     if (!form.reportValidity()) return;
     if (form.elements._honey.value) return;
     const payload = Object.fromEntries(new FormData(form));
-    payload._subject = `BMS İletişim | ${payload.subject.replace(/[\r\n]/g, ' ')}`;
+    payload['form-name'] = form.name;
     form.setAttribute('aria-busy', 'true');
     fields.disabled = true;
     submit.textContent = 'Gönderiliyor…';
     status.dataset.state = 'pending';
     status.textContent = 'İletiniz gönderiliyor, lütfen bekleyin.';
     try {
-      const result = await deliverContact(form.dataset.endpoint, payload);
-      if (result === 'activation-required') {
-        status.dataset.state = 'error';
-        status.textContent = 'İletişim formunun e-posta doğrulaması henüz tamamlanmadı. Lütfen daha sonra tekrar deneyin.';
-      } else {
-        status.dataset.state = 'success';
-        status.textContent = 'Talebiniz alındı. Sizinle e-posta adresiniz üzerinden iletişime geçeceğiz.';
-        const subject = form.elements.subject.value;
-        form.reset();
-        form.elements.subject.value = subject;
-      }
+      await deliverContact(form.dataset.endpoint, payload);
+      status.dataset.state = 'success';
+      status.textContent = 'Talebiniz alındı. Sizinle e-posta adresiniz üzerinden iletişime geçeceğiz.';
+      const subject = form.elements.subject.value;
+      form.reset();
+      form.elements.subject.value = subject;
     } catch (error) {
       status.dataset.state = 'error';
       status.textContent = error.name === 'AbortError'

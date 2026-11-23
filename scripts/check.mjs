@@ -36,6 +36,21 @@ for(const [html,count] of [[consultingHtml,consulting.length],[educationHtml,tra
 }
 const contact=await readFile('dist/iletisim/index.html','utf8');
 assert(contact.includes('id="contact-page-form"'));assert(contact.includes('id="contact-dialog-form"'));
+for (const page of pages) {
+ const html = await readFile('dist' + page.path + 'index.html', 'utf8');
+ assert(!html.includes('formsubmit.co'), 'Legacy provider in ' + page.path);
+ assert(html.includes('src="/contact-netlify-v1.js"'), 'Missing Netlify handler on ' + page.path);
+ for (const [form] of html.matchAll(/<form\b[^>]*class="contact-form"[\s\S]*?<\/form>/g)) {
+  const name = form.match(/\bname="([^"]+)"/)[1];
+  assert.match(name, /^bms-iletisim(?:-pencere)?$/);
+  assert(form.includes('data-netlify="true"'));
+  assert(form.includes('data-endpoint="/"'));
+  assert(form.includes('netlify-honeypot="_honey"'));
+  assert(form.includes('name="form-name" value="' + name + '"'));
+  assert(!form.includes('name="_subject"') && !form.includes('name="_template"'));
+ }
+}
+console.log('PASS: generated forms use Netlify declarations, explicit form names and the current handler.');
 const ids=[...contact.matchAll(/\bid="([^"]+)"/g)].map(m=>m[1]);assert.equal(ids.length,new Set(ids).size,'Form IDs must not collide');
 assert(!home.includes('class="topbar"'));assert(!home.includes('odaklanın.'));
 assert(consultingHtml.indexOf('id="iso-17020"')<consultingHtml.indexOf('id="iso-17025"'));

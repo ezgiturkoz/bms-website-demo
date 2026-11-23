@@ -21,17 +21,20 @@ export const disclaimer=()=>'<aside class="note"><strong>Akreditasyon süreci ha
 
 export const contactButton = subject => `<a class="button contact-trigger" data-contact-subject="${escape(subject)}" href="/iletisim/?konu=${encodeURIComponent(subject)}#iletisim-formu">İletişime geçin</a>`;
 
-export const contactForm = (id='contact-page-form') => `<form class="contact-form" id="${id}" action="${contactEndpoint}" method="POST" data-endpoint="${contactAjaxEndpoint}" aria-describedby="${id}-privacy">
+export const contactForm = (id='contact-page-form') => {
+ const formName = id === 'contact-page-form' ? 'bms-iletisim' : 'bms-iletisim-pencere';
+ return `<form class="contact-form" id="${id}" name="${formName}" action="${contactEndpoint}" method="POST" data-endpoint="${contactAjaxEndpoint}" data-netlify="true" netlify-honeypot="_honey" aria-describedby="${id}-privacy">
+ <input type="hidden" name="form-name" value="${formName}">
  <fieldset><legend class="visually-hidden">İletişim bilgileriniz ve talebiniz</legend>
   <div class="form-field"><label for="${id}-email">E-posta adresiniz</label><input id="${id}-email" name="email" type="email" autocomplete="email" maxlength="254" required placeholder="ornek@kurumunuz.com"></div>
   <div class="form-field"><label for="${id}-subject">Konu</label><input id="${id}-subject" name="subject" type="text" minlength="3" maxlength="200" required placeholder="Hangi konuda görüşmek istersiniz?"></div>
   <div class="form-field"><label for="${id}-message">İletiniz</label><textarea id="${id}-message" name="message" rows="5" minlength="10" maxlength="5000" required placeholder="İhtiyacınızı ve talebinizi bizimle paylaşın."></textarea></div>
   <div class="form-honey" aria-hidden="true"><label for="${id}-website">Bu alanı boş bırakın</label><input id="${id}-website" type="text" name="_honey" tabindex="-1" autocomplete="off"></div>
-  <input type="hidden" name="_subject" value="BMS web sitesi iletişim talebi"><input type="hidden" name="_template" value="table">
-  <p class="form-privacy" id="${id}-privacy">Bilgileriniz talebinizi yanıtlamak için kullanılır. E-posta iletimi FormSubmit üzerinden sağlanır.</p>
+  <p class="form-privacy" id="${id}-privacy">Bilgileriniz talebinizi yanıtlamak için kullanılır. Form kayıtları Netlify üzerinden işlenir.</p>
   <button class="button" type="submit">İletiyi gönder</button>
  </fieldset>
  <p class="form-status" role="status" aria-live="polite" aria-atomic="true"></p>
 </form>`;
+};
 
 export const contactDialog = () => `<dialog class="contact-dialog" id="contact-dialog" aria-labelledby="contact-dialog-title"><button class="dialog-close" type="button" aria-label="İletişim formunu kapat"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="m6 6 12 12M6 18 18 6" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button><p class="eyebrow">BİRLİKTE PLANLAYALIM</p><h2 id="contact-dialog-title">Size nasıl yardımcı olabiliriz?</h2><p class="dialog-intro">Talebinizi paylaşın, ihtiyaçlarınıza uygun kapsamı birlikte belirleyelim.</p>${contactForm('contact-dialog-form')}</dialog>`;
