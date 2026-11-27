@@ -3,3 +3,7 @@ https://bmskalite.com.tr/* https://www.bmskalite.com/:splat 301!
 https://www.bmskalite.com.tr/* https://www.bmskalite.com/:splat 301!
 http://bmskalite.com.tr/* https://www.bmskalite.com/:splat 301!
 http://www.bmskalite.com.tr/* https://www.bmskalite.com/:splat 301!
+
+# Certificate lookup is served by the production document panel.
+/dogrulama https://panel.bmskalite.com/dogrulama 302!
+/dogrulama/ https://panel.bmskalite.com/dogrulama 302!
